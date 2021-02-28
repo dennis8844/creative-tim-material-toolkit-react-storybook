@@ -82,3 +82,12 @@ We're making it easier to play around with Creative Tim's components in Storyboo
 1. Read our introductory tutorial at [Learn Storybook](https://www.learnstorybook.com/intro-to-storybook/react/en/get-started/).
 2. Learn how to transform your component libraries into design systems in our [Design Systems for Developers](https://www.learnstorybook.com/design-systems-for-developers/) tutorial.
 2. See our official documentation at [Storybook](https://storybook.js.org/).
+
+## Task list
+- update component enums
+- build out component stories
+- write component tests
+- write script to automate the tests while updating stories
+- build the storybook production pages
+- deploy to gh pages or netlify
+- write depoly script using ci/cd to test before deploying
