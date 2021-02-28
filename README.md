@@ -9,7 +9,7 @@
   Chromatic's Intro to Storybook React template with Creative Tim's Material Toolkit React
 </h1>
 
-This template ships with the main React and Storybook configuration files you'll need to get up and running fast.
+This is still a works in progress. Come back later for progress or reach out if you want to contribute. This template ships with the main React and Storybook configuration files you'll need to get up and running fast.
 
 ## 🚅  Quick start
 
@@ -17,19 +17,19 @@ This template ships with the main React and Storybook configuration files you'll
 
     ```shell
     # Clone the template
-    npx degit chromaui/intro-storybook-react-template taskbox
+    gh repo clone dennis8844/creative-tim-material-toolkit-react-storybook
     ```
 
 1.  **Install the dependencies.**
 
-    Navigate into your new site’s directory and install the necessary dependencies.
+    Navigate into your the cloded directory and instally the files
 
     ```shell
     # Navigate to the directory
-    cd taskbox/
+    cd <dir name with package.json of cloned repo>
 
     # Install the dependencies
-    yarn
+    yarn install
     ```
 1.  **Browse your stories!**
 
@@ -70,6 +70,12 @@ A quick look at the top-level files and directories included with this template.
 ## Contribute
 
 If you encounter an issue with the template, we encourage you to open an issue in this template's repository.
+
+## Creative Tim
+
+We're making it easier to play around with Creative Tim's components in Storybook. More about his library and documents can be found at...
+- https://github.com/creativetimofficial/material-kit-react
+- https://www.creative-tim.com/product/material-kit-react
 
 ## Learning Storybook
 
