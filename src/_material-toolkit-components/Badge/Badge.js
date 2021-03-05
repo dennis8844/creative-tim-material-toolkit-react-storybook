@@ -1,35 +1,56 @@
 import React from "react";
 // nodejs library to set properties for components
 import PropTypes from "prop-types";
+import classNames from "classnames";
 
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-
-import styles from "../assets/jss/material-kit-react/components/badgeStyle.js";
+import { BADGE_COLORS } from "../_utils/enums";
+import styles from "../_assets/jss/material-kit-react/components/badgeStyle.js";
 
 const useStyles = makeStyles(styles);
 
 export default function Badge(props) {
   const classes = useStyles();
-  const { color, children } = props;
+  const {
+      color,
+      backgroundColor,
+      className,
+      children,
+      style
+  } = props;
+
+  let newStyle = {
+      ...style
+  };
+
+  if (!!backgroundColor) {
+      newStyle.backgroundColor = backgroundColor;
+  }
+
+  const badgeClasses = classNames({
+    [classes.badge]: true,
+    [classes[color]]: !!color,
+    [className]: !!className
+  });
+
   return (
-    <span className={classes.badge + " " + classes[color]}>{children}</span>
+    <span className={badgeClasses} style={newStyle}>
+        {children}
+    </span>
   );
 }
 
 Badge.defaultProps = {
-  color: "gray"
+  color: BADGE_COLORS.gray,
+  className: "",
+  backgroundColor: "",
+  style: {}
 };
 
 Badge.propTypes = {
-  color: PropTypes.oneOf([
-    "primary",
-    "warning",
-    "danger",
-    "success",
-    "info",
-    "rose",
-    "gray"
-  ]),
+  color: PropTypes.oneOf([...Object.values(BADGE_COLORS)]),
+  className: PropTypes.string,
+  style: PropTypes.object,
   children: PropTypes.node
 };

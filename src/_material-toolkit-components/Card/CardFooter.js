@@ -8,25 +8,42 @@ import { makeStyles } from "@material-ui/core/styles";
 // @material-ui/icons
 
 // core components
-import styles from "../assets/jss/material-kit-react/components/cardFooterStyle.js";
+import styles from "../_assets/jss/material-kit-react/components/cardFooterStyle.js";
 
 const useStyles = makeStyles(styles);
 
 export default function CardFooter(props) {
   const classes = useStyles();
-  const { className, children, ...rest } = props;
+  const {
+      backgroundColor,
+      className,
+      children,
+      ...rest
+  } = props;
+
+  let newRest = {...rest};
+
+  if (!!backgroundColor) {
+    newRest.style = {
+        ...newRest.style,
+        backgroundColor: backgroundColor
+    };
+  }
+
   const cardFooterClasses = classNames({
     [classes.cardFooter]: true,
-    [className]: className !== undefined
+    [className]: !!className
   });
+
   return (
-    <div className={cardFooterClasses} {...rest}>
+    <div className={cardFooterClasses} {...newRest}>
       {children}
     </div>
   );
 }
 
 CardFooter.propTypes = {
+  backgroundColor: PropTypes.string,
   className: PropTypes.string,
   children: PropTypes.node
 };
