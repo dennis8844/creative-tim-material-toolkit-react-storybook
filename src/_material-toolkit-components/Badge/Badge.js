@@ -49,6 +49,7 @@ Badge.defaultProps = {
 };
 
 Badge.propTypes = {
+  backgroundColor: PropTypes.string,
   color: PropTypes.oneOf([...Object.values(BADGE_COLORS)]),
   className: PropTypes.string,
   style: PropTypes.object,

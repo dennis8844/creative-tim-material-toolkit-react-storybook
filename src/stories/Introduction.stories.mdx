@@ -1,120 +1,19 @@
-import { Meta } from '@storybook/addon-docs/blocks';
-import Code from '../assets/icon/code-brackets.svg';
-import Colors from '../assets/icon/colors.svg';
-import Comments from '../assets/icon/comments.svg';
-import Direction from '../assets/icon/direction.svg';
-import Flow from '../assets/icon/flow.svg';
-import Plugin from '../assets/icon/plugin.svg';
-import Repo from '../assets/icon/repo.svg';
-import StackAlt from '../assets/icon/stackalt.svg';
+import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks';
+import Code from '../storybook-assets/icon/code-brackets.svg';
+import Colors from '../storybook-assets/icon/colors.svg';
+import Comments from '../storybook-assets/icon/comments.svg';
+import Direction from '../storybook-assets/icon/direction.svg';
+import Flow from '../storybook-assets/icon/flow.svg';
+import Plugin from '../storybook-assets/icon/plugin.svg';
+import Repo from '../storybook-assets/icon/repo.svg';
+import StackAlt from '../storybook-assets/icon/stackalt.svg';
 
-<Meta title="Example/Introduction" />
+<Meta title="Getting Started/Introduction" />
 
-<style>{`
-  .subheading {
-    --mediumdark: '#999999';
-    font-weight: 900;
-    font-size: 13px;
-    color: #999;
-    letter-spacing: 6px;
-    line-height: 24px;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-    margin-top: 40px;
-  }
+# Welcome to the Storybook Version of Creative Tim's Materail Tool Kit React
 
-  .link-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    row-gap: 10px;
-  }
-
-  @media (min-width: 620px) {
-    .link-list {
-      row-gap: 20px;
-      column-gap: 20px;
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-
-  @media all and (-ms-high-contrast:none) {
-  .link-list {
-      display: -ms-grid;
-      -ms-grid-columns: 1fr 1fr;
-      -ms-grid-rows: 1fr 1fr;
-    }
-  }
-
-  .link-item {
-    display: block;
-    padding: 20px 30px 20px 15px;
-    border: 1px solid #00000010;
-    border-radius: 5px;
-    transition: background 150ms ease-out, border 150ms ease-out, transform 150ms ease-out;
-    color: #333333;
-    display: flex;
-    align-items: flex-start;
-  }
-
-  .link-item:hover {
-    border-color: #1EA7FD50;
-    transform: translate3d(0, -3px, 0);
-    box-shadow: rgba(0, 0, 0, 0.08) 0 3px 10px 0;
-  }
-
-  .link-item:active {
-    border-color: #1EA7FD;
-    transform: translate3d(0, 0, 0);
-  }
-
-  .link-item strong {
-    font-weight: 700;
-    display: block;
-    margin-bottom: 2px;
-  }
-  
-  .link-item img {
-    height: 40px;
-    width: 40px;
-    margin-right: 15px;
-    flex: none;
-  }
-
-  .link-item span {
-    font-size: 14px;
-    line-height: 20px;
-  }
-
-  .tip {
-    display: inline-block;
-    border-radius: 1em;
-    font-size: 11px;
-    line-height: 12px;
-    font-weight: 700;
-    background: #E7FDD8;
-    color: #66BF3C;
-    padding: 4px 12px;
-    margin-right: 10px;
-    vertical-align: top;
-  }
-
-  .tip-wrapper {
-    font-size: 13px;
-    line-height: 20px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }
-
-  .tip-wrapper code {
-    font-size: 12px;
-    display: inline-block;
-  }
-
-  
-`}</style>
-
-# Welcome to Storybook
+The original component library from Creative Tim can be found on Github at [here](), and the documentation can be found [https://www.creative-tim.com/product/material-kit-react](https://www.creative-tim.com/product/material-kit-react)
+The version of react storybook is based off [Chromatic](https://www.chromatic.com/)
 
 Storybook helps you build UI components in isolation from your app's business logic, data, and context.
 That makes it easy to develop hard-to-reach states. Save these UI states as **stories** to revisit during development, testing, or QA.
@@ -122,6 +21,54 @@ That makes it easy to develop hard-to-reach states. Save these UI states as **st
 Browse example stories now by navigating to them in the sidebar.
 View their code in the `src/stories` directory to learn how they work.
 We recommend building UIs with a [**component-driven**](https://componentdriven.org) process starting with atomic components and ending with pages.
+
+
+# License
+MIT LICENSE
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+# Getting started
+
+You can convert our theme to TypeScript support by [reading this thread](https://github.com/creativetimofficial/ct-material-dashboard-pro-react/issues/14?ref=creativetim).
+
+1. **Install NodeJs**
+    version 14.5 from NodeJs Official Page. Install version `14.5` or install and use this version within [nvm](https://www.npmjs.com/package/nvm)
+
+1. **Clone the repo**
+
+    ```shell
+    # Clone the template
+    gh repo clone dennis8844/creative-tim-material-toolkit-react-storybook
+    ```
+
+1. **Install the dependencies.**
+
+    ```shell
+    # Navigate to the directory
+    cd <dir name with package.json of cloned repo>
+
+    # Install the dependencies
+    yarn install
+    ```
+
+1. **Browse your stories!**
+
+    ```shell
+    # start the storybook server, start customizing by addign components and tests
+    yarn storybook
+    ```
+    You can then see the changes at [http://localhost:6006](http://localhost:6006)
+
+1. **Build Production version and deploy static version**
+    ```shell
+    #coming soon
+    ```
 
 <div className="subheading">Configure</div>
 
@@ -205,3 +152,4 @@ We recommend building UIs with a [**component-driven**](https://componentdriven.
   <span className="tip">Tip</span>Edit the Markdown in{' '}
   <code>src/stories/Introduction.stories.mdx</code>
 </div>
+

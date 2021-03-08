@@ -1,5 +1,5 @@
-import logo from './assets/icon/logo.svg';
-import './assets/stylesheets/App.css';
+import logo from './storybook-assets/icon/logo.svg';
+import './storybook-assets/stylesheets/App.css';
 
 function App() {
   return (

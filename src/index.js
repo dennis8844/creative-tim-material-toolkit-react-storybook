@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './assets/stylesheets/index.css';
+import './storybook-assets/stylesheets/index.css';
 import App from './App';
 import reportWebVitals from './utils/reportWebVitals';
 

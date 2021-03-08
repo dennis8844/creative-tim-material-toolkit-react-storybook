@@ -12,7 +12,7 @@ import styles from "../_assets/jss/material-kit-react/components/cardStyle.js";
 
 const useStyles = makeStyles(styles);
 
-export default function Card(props) {
+const Card = (props) => {
   const classes = useStyles();
   const {
       className,
@@ -43,7 +43,7 @@ export default function Card(props) {
       {children}
     </div>
   );
-}
+};
 
 Card.propTypes = {
   backgroundColor: PropTypes.string,
@@ -52,3 +52,5 @@ Card.propTypes = {
   carousel: PropTypes.bool,
   children: PropTypes.node
 };
+
+export default Card;

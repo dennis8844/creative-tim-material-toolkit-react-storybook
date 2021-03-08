@@ -22,7 +22,7 @@ This is still a works in progress. Come back later for progress or reach out if 
 
 1.  **Install the dependencies.**
 
-    Navigate into your the cloded directory and instally the files
+    Navigate into your the cloded directory and install the files
 
     ```shell
     # Navigate to the directory
@@ -34,6 +34,11 @@ This is still a works in progress. Come back later for progress or reach out if 
 1.  **Browse your stories!**
 
     Run `yarn storybook` to see your component's stories at `http://localhost:6006`
+    
+1. **Build Production version and deploy static version**
+    ```shell
+    #coming soon
+    ```
 
 ## 🔎 What's inside?
 
