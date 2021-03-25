@@ -1,0 +1,55 @@
+import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks';
+import CustomLinearProgress from '../_material-toolkit-components/CustomLinearProgress/CustomLinearProgress';
+
+<Meta title="Components/LinearProgress" component={CustomLinearProgress} />
+
+# CustomLinearProgress
+We've decided to extend the default material-ui linear progress to make it more easier for you to use our styles.
+
+## Styles
+
+You will find the styles for this component in
+`src/assets/jss/material-kit-react/components/customLinearProgressStyle.js`.
+
+## Example
+
+```javascript
+import CustomLinearProgress from "components/CustomLinearProgress/CustomLinearProgress.js";
+```
+
+<Canvas>
+  <Story name="LinearProgress">
+    <div>
+      <CustomLinearProgress
+        variant="determinate"
+        color="primary"
+        value={30}
+      />
+      <CustomLinearProgress
+        variant="determinate"
+        color="info"
+        value={60}
+      />
+      <CustomLinearProgress
+        variant="determinate"
+        color="success"
+        value={100}
+        style={{ width: "35%", display: "inline-block" }}
+      />
+      <CustomLinearProgress
+        variant="determinate"
+        color="warning"
+        value={100}
+        style={{ width: "20%", display: "inline-block" }}
+      />
+      <CustomLinearProgress
+        variant="determinate"
+        color="danger"
+        value={25}
+        style={{ width: "45%", display: "inline-block" }}
+      />
+    </div>
+  </Story>
+</Canvas>
+
+

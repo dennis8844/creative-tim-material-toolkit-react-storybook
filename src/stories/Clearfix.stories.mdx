@@ -1,0 +1,25 @@
+import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks';
+import Clearfix from '../_material-toolkit-components/Clearfix/Clearfix';
+
+<Meta title="Components/Clearfix" component={Clearfix} />
+
+# Clearfix
+
+A clearfix is a way for an element to automatically clear its child elements, so that you don't need to add additional markup. It's generally used in float layouts where elements are floated to be stacked horizontally.
+
+You can see it being used in src/views/Components/Sections/SectionNotifications.js.
+
+```javascript
+import Clearfix from "components/Clearfix/Clearfix.js";
+```
+
+<Canvas>
+  <Story name="Clearfix">
+    ```
+    comment
+    ```
+    <Clearfix />
+  </Story>
+</Canvas>
+
+

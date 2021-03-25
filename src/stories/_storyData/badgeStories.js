@@ -1,6 +1,6 @@
 import React from 'react';
-import { Badge } from '../_material-toolkit-components/';
-import {BADGE_COLORS} from "../_material-toolkit-components/_utils/enums";
+import { Badge } from '../../_material-toolkit-components';
+import {BADGE_COLORS} from "../../_material-toolkit-components/_utils/enums";
 import EmailIcon from '@material-ui/icons/Email';
 const iconStyles = {
     fontSize: 10

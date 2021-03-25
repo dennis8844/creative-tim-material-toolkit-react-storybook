@@ -1,11 +1,11 @@
 
 import React from 'react';
 
-import { Button } from '../_material-toolkit-components/';
+import { Button } from '../../_material-toolkit-components';
 import {
     BUTTON_COLORS,
     BUTTON_SIZES
-} from "../_material-toolkit-components/_utils/enums";
+} from "../../_material-toolkit-components/_utils/enums";
 import DeleteForeverSharpIcon from '@material-ui/icons/DeleteForeverSharp';
 
 export const buttonArgs = {

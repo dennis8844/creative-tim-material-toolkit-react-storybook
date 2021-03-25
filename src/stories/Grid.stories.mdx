@@ -1,0 +1,52 @@
+import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks';
+import GridContainer from '../_material-toolkit-components/Grid/GridContainer';
+import GridItem from '../_material-toolkit-components/Grid/GridItem';
+
+<Meta title="Components/Grid" component={GridContainer} />
+
+# Grid
+
+We've decided to extend the default Grid component from [Material-UI](https://material-ui-next.com/layout/grid/?ref=creativetim).
+
+We've done this so we could add some personal styles to them.
+
+## Usage
+```javascript
+// instead of importing the container from material-ui
+import Grid from 'material-ui/Grid';
+
+// you would import our component like this
+import GridContainer from "components/Grid/GridContainer.js";
+```
+
+## GridContainer
+
+```javascript
+// instead of using the item from material-ui
+<Grid item {...props}>
+  ...
+</Grid>
+```
+<Canvas>
+  <Story name="GridContainer">
+    <GridContainer>
+        I'm a Grid Container
+    </GridContainer>
+  </Story>
+</Canvas>
+
+## GridItem
+
+```javascript
+// you would use our component like this
+<GridItem {...props}>
+  ...
+</GridItem>
+```
+<Canvas>
+  <Story name="GridItem">
+    <GridContainer>
+        I'm a Grid Item
+    </GridContainer>
+  </Story>
+</Canvas>

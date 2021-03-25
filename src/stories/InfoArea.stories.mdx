@@ -1,0 +1,56 @@
+import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks';
+import InfoArea from '../_material-toolkit-components/InfoArea/InfoArea';
+import Timeline from "@material-ui/icons/Timeline";
+
+<Meta title="Components/InfoArea" component={InfoArea} />
+
+# InfoArea
+
+This component was made by us to make it a bit more easier for you to render some information.
+
+```javascript
+import InfoArea from "components/InfoArea/InfoArea.js";
+```
+
+## Styles
+
+You will find the styles for this component in
+`src/assets/jss/material-kit-react/components/infoStyle.js`.
+
+## Example
+
+<Canvas>
+  <Story name="InfoArea">
+    <InfoArea
+      title="Marketing"
+      description="We've created the marketing campaign of the website. It was a very interesting collaboration."
+      icon={Timeline}
+      iconColor="rose"
+    />
+  </Story>
+</Canvas>
+
+## Props
+
+```javascript
+InfoArea.defaultProps = {
+  iconColor: "gray"
+};
+
+InfoArea.propTypes = {
+  icon: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  iconColor: PropTypes.oneOf([
+    "primary",
+    "warning",
+    "danger",
+    "success",
+    "info",
+    "rose",
+    "gray"
+  ]),
+  vertical: PropTypes.bool
+};
+
+```

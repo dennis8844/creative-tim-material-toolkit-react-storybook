@@ -1,0 +1,47 @@
+import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks';
+import Icon from '@material-ui/core/Icon';
+import EmailIcon from '@material-ui/icons/Email';
+
+<Meta title="Components/Icons" component={Icon} />
+
+# Icons
+
+## Icons font
+In order to use the font Icon component, or to use icon names (ligatures) directly in components that support them, you must first add the Material icons font. Here are some instructions on how to do so.
+
+You would use them like:
+
+```javascript
+<i className="material-icons">name_of_the_icon</i>
+```
+or you could use them with material-ui like so:
+
+```javascript
+import Icon from 'material-ui/Icon';
+<Icon>name_of_the_icon</Icon>
+```
+
+## SVG Icons
+
+In order to use prebuilt SVG Material icons, such as those found in the component demos you must first install the @material-ui/icons package:
+
+`npm install --save @material-ui/icons`
+
+Then you would use them like so:
+
+```javascript
+import NameOfTheIcon from '@material-ui/icons/NameOfTheIcon';
+<NameOfTheIcon />
+```
+
+## Usage
+
+<Canvas>
+  <Story name="Icon">
+    <Icon>info</Icon>
+    <br />
+    <EmailIcon />
+  </Story>
+</Canvas>
+
+

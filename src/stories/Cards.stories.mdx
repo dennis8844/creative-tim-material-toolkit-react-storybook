@@ -7,6 +7,8 @@ import CardHeader from "../_material-toolkit-components/Card/CardHeader.js";
 import CardFooter from "../_material-toolkit-components/Card/CardFooter.js";
 import Button from "../_material-toolkit-components/CustomButtons/Button.js";
 import Quote from "../_material-toolkit-components/Typography/Quote.js";
+// import * as cardStories from './_storyData/cardStories.js';
+// const argTypes = cardStories.cardArgs.argTypes;
 
 import imagesStyles from "../_material-toolkit-components/_assets/jss/material-kit-react/imagesStyles.js";
 import {
@@ -32,7 +34,7 @@ const styles = {
 const useStyles = makeStyles(styles);
 const classes = useStyles();
 
-<Meta title="Components/Cards/info" components={Card, CardHeader, CardBody, CardFooter}/>
+<Meta title="Components/Cards" components={Card, CardHeader, CardBody, CardFooter} argTypes={argTypes}/>
 
 # Cards
 
@@ -240,3 +242,7 @@ CardHeader.propTypes = {
   plain: PropTypes.bool
 };
 ```
+
+See for Yourself
+
+<Story story={cardStories.Props} />
