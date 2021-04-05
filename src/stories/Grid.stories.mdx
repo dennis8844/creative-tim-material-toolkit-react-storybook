@@ -1,6 +1,7 @@
 import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks';
 import GridContainer from '../_material-toolkit-components/Grid/GridContainer';
 import GridItem from '../_material-toolkit-components/Grid/GridItem';
+import Card from "../_material-toolkit-components/Card/Card.js";
 
 <Meta title="Components/Grid" component={GridContainer} />
 
@@ -11,6 +12,7 @@ We've decided to extend the default Grid component from [Material-UI](https://ma
 We've done this so we could add some personal styles to them.
 
 ## Usage
+
 ```javascript
 // instead of importing the container from material-ui
 import Grid from 'material-ui/Grid';
@@ -43,10 +45,15 @@ import GridContainer from "components/Grid/GridContainer.js";
   ...
 </GridItem>
 ```
+
 <Canvas>
   <Story name="GridItem">
     <GridContainer>
-        I'm a Grid Item
+      <GridItem xs={12} sm={12} md={8}>
+        <Card>
+          I'm a Grid Item on a Card
+          </Card>
+      </GridItem>
     </GridContainer>
   </Story>
 </Canvas>

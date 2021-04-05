@@ -1,0 +1,87 @@
+import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks';
+import Carousel from "react-slick";
+import LocationOn from "@material-ui/icons/LocationOn";
+import GridContainer from "../_material-toolkit-components/Grid/GridContainer.js";
+import GridItem from "../_material-toolkit-components/Grid/GridItem.js";
+import Card from "../_material-toolkit-components/Card/Card.js";
+import image1 from "../_material-toolkit-components/_assets/img/bg.jpg";
+import image2 from "../_material-toolkit-components/_assets/img/bg2.jpg";
+import image3 from "../_material-toolkit-components/_assets/img/bg3.jpg";
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true
+};
+
+<Meta title="Plugins/Carousel" />
+
+# React Slick 0.24.0
+
+## Styles
+
+You will find the styles for this component in `../_assets/scss/plugins/_plugin-react-slick.scss`.
+
+## Example
+
+<Canvas>
+  <Story name="Carousel">
+    <GridContainer>
+      <GridItem xs={12} sm={12} md={8}>
+        <Card>
+          <Carousel {...settings}>
+            <div>
+              <img
+                src={image1}
+                alt="First slide"
+                className="slick-image"
+              />
+              <div className="slick-caption">
+                <h4>
+                  <LocationOn className="slick-icons" />Yellowstone
+                  National Park, United States
+                </h4>
+              </div>
+            </div>
+            <div>
+              <img
+                src={image2}
+                alt="Second slide"
+                className="slick-image"
+              />
+              <div className="slick-caption">
+                <h4>
+                  <LocationOn className="slick-icons" />Somewhere Beyond,
+                  United States
+                </h4>
+              </div>
+            </div>
+            <div>
+              <img
+                src={image3}
+                alt="Third slide"
+                className="slick-image"
+              />
+              <div className="slick-caption">
+                <h4>
+                  <LocationOn className="slick-icons" />Yellowstone
+                  National Park, United States
+                </h4>
+              </div>
+            </div>
+          </Carousel>
+        </Card>
+      </GridItem>
+    </GridContainer>
+  </Story>
+</Canvas>
+
+## Props
+
+We've added some extra classes to the default ones from react-slick.
+
+These are `.slick-image` for the image of the slide, `.slick-caption`, the text that appears over the image and `.slick-icons`, used for the icon that goes along with the text.
+
+For more details please refer to react-slick's official docs.

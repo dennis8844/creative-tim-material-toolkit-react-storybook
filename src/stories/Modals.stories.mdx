@@ -1,0 +1,93 @@
+import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks';
+import withStyles from "@material-ui/core/styles/withStyles";
+import {
+    Slide,
+    Dialog,
+    DialogTitle,
+    DialogContent,
+    DialogActions,
+    IconButton
+} from "@material-ui/core";
+// @material-ui/icons
+import Close from "@material-ui/icons/Close";
+// core components
+import Button from "../_material-toolkit-components/CustomButtons/Button.js";
+import modalStyle from "../_material-toolkit-components/_assets/jss/material-kit-react/modalStyle.js";
+const useStyles = makeStyles(modalStyle);
+const classes = useStyles();
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="down" ref={ref} {...props} />;
+});
+const [showModal, setShowModal] = React.useState(false);
+
+<Meta title="Components/Modal" component={Dialog} />
+
+# Modal
+Use material-ui's dialog component to add dialogs to your site for lightboxes, user notifications, or completely custom content.
+
+```javascript
+import Dialog from "@material-ui/core/Dialog";
+```
+
+## Styles
+You will find the styles for this component in
+src/assets/jss/material-kit-react/modalStyle.js.
+
+## Example
+
+<Canvas>
+  <Story name="Modal">
+    <div>
+      <div>
+        <Button color="rose" round onClick={() => setShowModal(true)}>
+          Modal
+        </Button>
+      </div>
+      <Dialog
+        classes={{
+          root: classes.center,
+          paper: classes.modal
+        }}
+        open={showModal}
+        TransitionComponent={Transition}
+        keepMounted
+        onClose={() => setShowModal(false)}
+        aria-labelledby="modal-slide-title"
+        aria-describedby="modal-slide-description"
+      >
+        <DialogTitle
+          id="classic-modal-slide-title"
+          disableTypography
+          className={classes.modalHeader}
+        >
+          <IconButton
+            className={classes.modalCloseButton}
+            key="close"
+            aria-label="Close"
+            color="inherit"
+            onClick={() => setShowModal(false)}
+          >
+            <Close className={classes.modalClose} />
+          </IconButton>
+          <h4 className={classes.modalTitle}>Modal title</h4>
+        </DialogTitle>
+        <DialogContent
+          id="modal-slide-description"
+          className={classes.modalBody}
+        >
+          <h5>Are you sure you want to do this?</h5>
+        </DialogContent>
+        <DialogActions
+          className={classes.modalFooter + " " + classes.modalFooterCenter}
+        >
+          <Button onClick={() => setShowModal(false)}>Never Mind</Button>
+          <Button onClick={() => setShowModal(false)} color="success">
+            Yes
+          </Button>
+        </DialogActions>
+      </Dialog>
+    </div>
+  </Story>
+</Canvas>
+
+

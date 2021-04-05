@@ -1,0 +1,60 @@
+import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks';
+import Paginations from "../_material-toolkit-components/Pagination/Pagination.js";
+
+<Meta title="Components/Paginations" component={Paginations} />
+
+# Pagination
+We've created this special component due to the fact that you would have needed to write a lot of code to obtain a small component. So, it was done to make your life easier.
+
+## Styles
+You will find the styles for this component in
+`../_assets/jss/material-kit-react/components/paginationStyle.js.``
+
+```javascript
+import Paginations from "../_material-toolkit-components/Pagination/Pagination.js";
+```
+
+## Example
+
+<Canvas>
+  <Story name="Paginations">
+    <Paginations
+      pages={[
+        { text: "PREV" },
+        { text: 1 },
+        { text: 2 },
+        { active: true, text: 3 },
+        { text: 4 },
+        { text: 5 },
+        { text: "NEXT" }
+      ]}
+      color="info"
+    />
+  </Story>
+</Canvas>
+
+## Props
+```javascript
+Pagination.defaultProps = {
+  color: "primary"
+};
+
+Pagination.propTypes = {
+  pages: PropTypes.arrayOf(
+    PropTypes.shape({
+      active: PropTypes.bool,
+      disabled: PropTypes.bool,
+      text: PropTypes.oneOfType([
+        PropTypes.number,
+        PropTypes.oneOf(["PREV", "NEXT", "..."])
+      ]).isRequired,
+      onClick: PropTypes.func
+    })
+  ).isRequired,
+  color: PropTypes.oneOf(["primary", "info", "success", "warning", "danger"])
+};
+```
+
+
+
+

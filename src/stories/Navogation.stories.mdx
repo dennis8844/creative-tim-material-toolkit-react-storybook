@@ -1,0 +1,68 @@
+import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Components/Navigation" />
+
+# Navigation
+
+## Styles
+
+You will find all the styles for these components in
+`_material-toolkit-components/_assets/jss/jss/material-kit-react/components/headerStyle.js`
+`_material-toolkit-components/_assets/jss/jss/material-kit-react/components/headerLinksStyle.js`.
+
+The classic Material UI Appbar was restyled.
+
+You will find this component in `_material-toolkit-components/Header/Header.js`. In this component there is just the structure of the navbar. The links can be found in src/components/Header/HeaderLinks.js. We've done this because we want our users to be able to add their own links easily.
+
+You can choose between 9 colors by using the color property.
+
+If this property is not set, then the Appbar will be white.
+
+```javascript
+Header.defaultProps = {
+  color: "white"
+};
+
+Header.propTypes = {
+  color: PropTypes.oneOf([
+    "primary",
+    "info",
+    "success",
+    "warning",
+    "danger",
+    "transparent",
+    "white",
+    "rose",
+    "dark"
+  ]),
+  rightLinks: PropTypes.node,
+  leftLinks: PropTypes.node,
+  brand: PropTypes.string,
+  fixed: PropTypes.bool,
+  absolute: PropTypes.bool,
+  // this will cause the sidebar to change the color from
+  // this.props.color (see above) to changeColorOnScroll.color
+  // when the window.pageYOffset is heigher or equal to
+  // changeColorOnScroll.height and then when it is smaller than
+  // changeColorOnScroll.height change it back to
+  // this.props.color (see above)
+  changeColorOnScroll: PropTypes.shape({
+    height: PropTypes.number.isRequired,
+    color: PropTypes.oneOf([
+      "primary",
+      "info",
+      "success",
+      "warning",
+      "danger",
+      "transparent",
+      "white",
+      "rose",
+      "dark"
+    ]).isRequired
+  })
+};
+```
+
+## Props
+
+Please check out the [official material-ui documentation](https://material-ui-next.com/demos/app-bar/?ref=creativetim).

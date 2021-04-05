@@ -1,0 +1,70 @@
+import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks';
+import { makeStyles } from "@material-ui/core/styles";
+import Tooltip from "@material-ui/core/Tooltip";
+import Button from "../_material-toolkit-components/CustomButtons/Button.js";
+import styles from "../_material-toolkit-components/_assets/jss/material-kit-react/tooltipsStyle.js";
+const useStyles = makeStyles(styles);
+const classes = useStyles();
+
+<Meta title="Components/Tooltips" component={Tooltip} />
+
+# Tooltips
+
+## Styles
+
+You will find all the styles for these components in `./_assets/jss/material-kit-react/tooltipsStyle.js`.
+
+## Usage
+
+```javascript
+import Tooltip from "@material-ui/core/Tooltip";
+```
+
+### Examples
+
+<Canvas>
+  <Story name="Tooltips">
+    <div>
+      <h1>Tooltips</h1>
+      <h2>Example</h2>
+      <Tooltip
+        id="tooltip-left"
+        title="Tooltip on left"
+        placement="left"
+        classes={{ tooltip: classes.tooltip }}
+      >
+        <Button>On left</Button>
+      </Tooltip>
+      <Tooltip
+        id="tooltip-top"
+        title="Tooltip on top"
+        placement="top"
+        classes={{ tooltip: classes.tooltip }}
+      >
+        <Button>On top</Button>
+      </Tooltip>
+      <Tooltip
+        id="tooltip-bottom"
+        title="Tooltip on bottom"
+        placement="bottom"
+        classes={{ tooltip: classes.tooltip }}
+      >
+        <Button>On bottom</Button>
+      </Tooltip>
+      <Tooltip
+        id="tooltip-right"
+        title="Tooltip on right"
+        placement="right"
+        classes={{ tooltip: classes.tooltip }}
+      >
+        <Button>On right</Button>
+      </Tooltip>
+    </div>
+  </Story>
+</Canvas>
+
+## Props
+
+Please check out the [official material-ui documentation](https://material-ui-next.com/demos/tooltips/?ref=creativetim).
+
+

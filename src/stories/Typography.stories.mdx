@@ -1,0 +1,93 @@
+import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks';
+import Quote from "../_material-toolkit-components/Typography/Quote.js";
+import Muted from "../_material-toolkit-components/Typography/Muted.js";
+import Primary from "../_material-toolkit-components/Typography/Primary.js";
+import Info from "../_material-toolkit-components/Typography/Info.js";
+import Success from "../_material-toolkit-components/Typography/Success.js";
+import Warning from "../_material-toolkit-components/Typography/Warning.js";
+import Danger from "../_material-toolkit-components/Typography/Danger.js";
+
+<Meta title="Components/Typography" />
+
+# Typography
+
+Documentation and examples for Material Kit React typography, including global settings, headings, body text, lists, and more.
+
+## Styles
+
+You will find the styles for these components in `./_assets/jss/material-kit-react/components/typographyStyle.js`.
+
+## Headings
+
+```javascript
+import Clearfix from "components/Clearfix/Clearfix.js";
+```
+
+<Canvas>
+  <Story name="Headings">
+    <h1>h1. Material Kit React heading</h1>
+    <h2>h2. Material Kit React heading</h2>
+    <h3>h3. Material Kit React heading</h3>
+    <h4>h4. Material Kit React heading</h4>
+    <h5>h5. Material Kit React heading</h5>
+    <h6>h6. Material Kit React heading</h6>
+    <h2>
+      Header with small subtitle<br />
+      <small>Use &lt;small&gt; tag for the headers</small>
+    </h2>
+  </Story>
+</Canvas>
+
+## Paragraph
+
+<Canvas>
+  <Story name="Paragraph">
+    <p>
+      I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.
+    </p>
+  </Story>
+</Canvas>
+
+## Quote
+
+<Canvas>
+  <Story name="Quote">
+    <Quote
+      text="I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at."
+      author=" Kanye West, Musician"
+    />
+  </Story>
+</Canvas>
+
+## Text Colors
+
+<Canvas>
+  <Story name="Text Colors">
+    <div>
+      <Muted>
+        I will be the leader of a company that ends up being worth
+        billions of dollars, because I got the answers...
+      </Muted>
+      <Primary>
+        I will be the leader of a company that ends up being worth
+        billions of dollars, because I got the answers...
+      </Primary>
+      <Info>
+        I will be the leader of a company that ends up being worth
+        billions of dollars, because I got the answers...
+      </Info>
+      <Success>
+        I will be the leader of a company that ends up being worth
+        billions of dollars, because I got the answers...
+      </Success>
+      <Warning>
+        I will be the leader of a company that ends up being worth
+        billions of dollars, because I got the answers...
+      </Warning>
+      <Danger>
+        I will be the leader of a company that ends up being worth
+        billions of dollars, because I got the answers...
+      </Danger>
+    </div>
+  </Story>
+</Canvas>

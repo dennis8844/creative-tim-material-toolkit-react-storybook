@@ -1,0 +1,55 @@
+import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks';
+import Slider from "nouislider";
+React.useEffect(() => {
+    if (
+      !document
+        .getElementById("sliderRegular")
+        .classList.contains("noUi-target")
+    ) {
+      Slider.create(document.getElementById("sliderRegular"), {
+        start: [40],
+        connect: [true, false],
+        step: 1,
+        range: { min: 0, max: 100 }
+      });
+    }
+    if (
+      !document.getElementById("sliderDouble").classList.contains("noUi-target")
+    ) {
+      Slider.create(document.getElementById("sliderDouble"), {
+        start: [20, 60],
+        connect: [false, true, false],
+        step: 1,
+        range: { min: 0, max: 100 }
+      });
+    }
+    return function cleanup() {};
+});
+
+<Meta title="Plugins/Sliders" />
+
+# noUiSlider v13.1.5
+
+##  *Notice*
+
+Due to the fact that React noUiSlider v2.0.1 was not well maintained, we've dropped the usage of this component, and replaced it with the noUiSlider v12.1.0 component.
+
+Please refer to [noUiSlider documentation](https://refreshless.com/nouislider/?ref=creativetim) for more information.
+
+## Styles
+
+You will find the styles for this component in `../_assets/scss/material-dashboard-pro-react/plugins/_plugin-nouislider.scss`.
+
+## Example
+
+<Canvas>
+  <Story name="Carousel">
+    <div>
+      <div className="slider-primary" id="sliderRegular" />
+      <br />
+      <div className="slider-info" id="sliderDouble" />
+    </div>
+  </Story>
+</Canvas>
+
+If you want to add color to your slider you need to add on the div a `className="slider-$color"``, where `$color` can be one of `primary`, `info`, `success`, `warning`, `danger`.

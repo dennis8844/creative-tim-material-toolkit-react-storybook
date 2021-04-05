@@ -1,0 +1,119 @@
+import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks';
+import NavPills from "../_material-toolkit-components/NavPills/NavPills.js";
+
+<Meta title="Components/NavPills" component={NavPills} />
+
+# NavPills
+This component extends material-ui tabs component, we've done this to make it more easier for you to use our styles.
+
+## Styles
+You will find the styles for this component in
+src/assets/jss/material-kit-react/components/navPillsStyle.js.
+
+```javascript
+import NavPills from "_material-toolkit-components/NavPills/NavPills.js";
+```
+
+## Example
+
+<Canvas>
+  <Story name="NavPills">
+    <NavPills
+      color="warning"
+      tabs={[
+        {
+          tabButton: "Profile",
+          tabContent: (
+            <span>
+              <p>
+                Collaboratively administrate empowered markets via
+                plug-and-play networks. Dynamically procrastinate
+                B2C users after installed base benefits.
+              </p>
+              <br />
+              <p>
+                Dramatically visualize customer directed convergence
+                without revolutionary ROI. Collaboratively
+                administrate empowered markets via plug-and-play
+                networks. Dynamically procrastinate B2C users after
+                installed base benefits.
+              </p>
+              <br />
+              <p>This is very nice.</p>
+            </span>
+          )
+        },
+        {
+          tabButton: "Settings",
+          tabContent: (
+            <span>
+              <p>
+                Efficiently unleash cross-media information without
+                cross-media value. Quickly maximize timely
+                deliverables for real-time schemas.
+              </p>
+              <br />
+              <p>
+                Dramatically maintain clicks-and-mortar solutions
+                without functional solutions.
+              </p>
+            </span>
+          )
+        },
+        {
+          tabButton: "Options",
+          tabContent: (
+            <span>
+              <p>
+                Completely synergize resource taxing relationships
+                via premier niche markets. Professionally cultivate
+                one-to-one customer service with robust ideas.{" "}
+              </p>
+              <br />
+              <p>
+                Dynamically innovate resource-leveling customer
+                service for state of the art customer service.
+              </p>
+            </span>
+          )
+        }
+      ]}
+    />
+  </Story>
+</Canvas>
+
+## Props
+
+```javascript
+NavPills.defaultProps = {
+  active: 0,
+  color: "primary"
+};
+
+NavPills.propTypes = {
+  // index of the default active pill
+  active: PropTypes.number,
+  tabs: PropTypes.arrayOf(
+    PropTypes.shape({
+      tabButton: PropTypes.string,
+      tabIcon: PropTypes.func,
+      tabContent: PropTypes.node
+    })
+  ).isRequired,
+  color: PropTypes.oneOf([
+    "primary",
+    "warning",
+    "danger",
+    "success",
+    "info",
+    "rose"
+  ]),
+  direction: PropTypes.string,
+  horizontal: PropTypes.shape({
+    tabsGrid: PropTypes.object,
+    contentGrid: PropTypes.object
+  }),
+  alignCenter: PropTypes.bool
+};
+```
+
